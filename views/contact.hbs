@@ -1,0 +1,49 @@
+{{>header}}
+<title>YOS Enterprises | Contact</title>
+{{>navbar}}
+<div class="container-fluid mt-2">
+    <div class="row">
+        <div class="col-sm-6 col-12">
+            <div class="background text-light text-center p-2 mb-2">yosenterprises1@gmail.com</div>
+            <div class="background text-light text-center p-2 mb-2">7011873063</div>
+            <div class="background text-light text-center p-2 mb-2">GSTIN - 07BFDPD4652J1ZJ</div>
+            <div class="background text-light text-center p-2 mb-2">KH No. 174, Plot No. D-407, Block - D, Indra Park, Najafgarh, New Delhi - 110043</div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="450px" id="gmap_canvas" src="https://maps.google.com/maps?q=KH%20No.%20174,%20Plot%20No.%20D-407,%20Block%20-%20D,%20Indra%20Park,%20Najafgarh,%20New%20Delhi%20-%20110043&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+        </div>
+        <div class="col-sm-6 col-12">
+            <h5 class="background text-light text-center p-2">Contact Us</h5>
+            {{#if show}}
+            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                Thanks to Share Your Query With US!!!
+                Our Team Will Contact You Soon!!!!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+            <form method="post" action="/contact">
+                <div class="mb-3">
+                    <label class="form-label">Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="name" required placeholder="Enter Your Name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email Address<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="email" required
+                        placeholder="Enter Your Email Address">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone Number<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="phone" required placeholder="Enter Your Phone Number">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Subject<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="subject" required placeholder="Enter Subject">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message<span class="text-danger">*</span></label>
+                    <textarea name="message" required class="form-control" rows="5"></textarea>
+                </div>
+                <button type="submit" class="mybtn btn background text-light w-100 btn-sm">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{>footer}}
